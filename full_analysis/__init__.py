@@ -3,8 +3,7 @@ from .queries import *
 from .get_data import *
 from .graph import *
 from .revenue import *
-from .price import *
 from .client_abc import *
-from .retail import *
 from .queries_abc import *
 from .sku_abc import *
+from .get_data_abc import *

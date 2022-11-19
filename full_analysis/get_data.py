@@ -28,7 +28,7 @@ with conn:
 
     # If you need to save the result of query you do have to put in following line
     # if you don't - If you don't need - delete it
-    df_revenue2021.to_csv('/home/root/PycharmProjects/github/data/agent2021'+date+'.csv')  # directory path you need
+    df_revenue2021.to_csv('~/data/agent2021'+date+'.csv')  # directory path you need
 
 with conn:
     with conn.cursor() as curs:
@@ -38,7 +38,7 @@ with conn:
 
     # If you need to save the result of query you do have to put in following line
     # if you don't - If you don't need - delete it
-    df_revenue2022.to_csv('/home/root/PycharmProjects/github/data/agent2022'+date+'.csv')  # directory path you need
+    df_revenue2022.to_csv('~/data/agent2022'+date+'.csv')  # directory path you need
 
 # cohorts
 with conn:
@@ -49,7 +49,7 @@ with conn:
 
     # If you need to save the result of query you do have to put in following line
     # if you don't - If you don't need - delete it
-    df_cohort.to_csv('/home/root/PycharmProjects/github/data/cohort'+date+'.csv')  # directory path you need
+    df_cohort.to_csv('~/data/cohort'+date+'.csv')  # directory path you need
 
 
 conn.close()    # don't forget to close connection!!!

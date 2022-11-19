@@ -1,10 +1,9 @@
 import seaborn as sns
 from full_analysis.cohorts import *
 from full_analysis.revenue import *
-from full_analysis.price import *
 from full_analysis.client_abc import *
-import time
 from full_analysis.sku_abc import *
+import time
 
 date = time.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -19,7 +18,7 @@ def revenue():
     ax.text(3, 105000, 'limit of revenue per year - 12000',
             fontsize=9, fontweight='bold',
             bbox={'facecolor': 'green', 'alpha': 0.3})
-    plt.savefig('/home/dgdata21/PycharmProjects/github/1c_postgresql/diag/revenue' + date + '.pdf')
+    plt.savefig('~/diag/revenue' + date + '.pdf')
     return plt.show()
 
 
@@ -36,7 +35,7 @@ def revenue_quarter():
     ax.text(2, 32000, 'limit of revenue per quarter - 3000',
             fontsize=9, fontweight='bold',
             bbox={'facecolor': 'green', 'alpha': 0.2})
-    plt.savefig('/home/dgdata21/PycharmProjects/github/1c_postgresql/diag/revenue_q' + date + '.pdf')
+    plt.savefig('~/diag/revenue_q' + date + '.pdf')
     return plt.show()
 
 
@@ -51,7 +50,7 @@ def cohort():
                 cmap='Greens')
     ax.set_title('2021 - 2022', fontsize=12, fontweight='bold')
     ax.set(xlabel='Period of the "life" of cohorts', ylabel='Cohort')
-    plt.savefig('/home/dgdata21/PycharmProjects/github/1c_postgresql/diag/full_analysis' + date + '.pdf')
+    plt.savefig('~/diag/full_analysis' + date + '.pdf')
     return plt.show()
 
 
@@ -75,7 +74,5 @@ def abc_sku_quarter():
     ax.set_title('Revenue of sku by groups', fontsize=16, fontweight='bold', fontstyle='italic', fontfamily='sans')
     ax.set_xlabel('group', fontfamily='serif', fontweight='bold')
     ax.set_ylabel('Revenue, ths. r.', fontfamily='serif', fontweight='bold')
-    # ax.minorticks_on()
-    ax.grid(axis='y', which='major')
-    ax.grid(axis='y', which='minor')
+    ax.grid(axis='y')
     plt.show()

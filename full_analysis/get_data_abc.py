@@ -26,33 +26,37 @@ with conn:
         curs.execute(query_abc_2021_2q)
         record = curs.fetchall()
     df_abc_2021_2q = pd.DataFrame(query())
+
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2021_3q)
         record = curs.fetchall()
     df_abc_2021_3q = pd.DataFrame(query())
+
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2021_4q)
         record = curs.fetchall()
     df_abc_2021_4q = pd.DataFrame(query())
 
-
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2022_1q)
         record = curs.fetchall()
     df_abc_2022_1q = pd.DataFrame(query())
+
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2022_2q)
         record = curs.fetchall()
     df_abc_2022_2q = pd.DataFrame(query())
+
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2022_3q)
         record = curs.fetchall()
     df_abc_2022_3q = pd.DataFrame(query())
+
 with conn:
     with conn.cursor() as curs:
         curs.execute(query_abc_2022_4q)
