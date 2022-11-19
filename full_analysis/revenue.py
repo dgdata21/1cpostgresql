@@ -28,7 +28,3 @@ df_revenue_quarter_pivot = df_revenue_quarter_all.pivot_table(index='agent',
                                                               values='sum').reset_index()
 df_revenue_quarter_pivot = df_revenue_quarter_pivot.fillna(0)
 
-df_sum['sum'] = df_sum['sum'].astype(int)
-df_sum['sum'] = df_sum['sum'] / 1000
-df_sum['date'] = df_sum['date'].dt.month
-df_sum.to_csv('/home/dgdata21/PycharmProjects/github/1c_postgresql/csv/money' + date + '.csv')
