@@ -10,4 +10,3 @@ if __name__ == '__main__':
     graph_abc_client = full_analysis.abc_client()
     graph_abc_sku = full_analysis.abc_sku_quarter()
     graph_sum = full_analysis.money_out()
-    # df_sku_month = full_analysis.df_sku_month
