@@ -5,9 +5,11 @@ This research is just example and not full observing the structure of the postgr
 Problems to be solved:
 - Analyze revenue of each manager in quarters of the certain period;
 - Analyze revenue of each manager in years of the certain period;
+- Cohort analysis of clients;
 - ABC-analysis of sku in quarters of the certain period.
 
 The tables to use:
 - table of sales orders;
 - table of managers;
+- table of clients;
 - table of sku.
