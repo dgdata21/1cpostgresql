@@ -1,9 +1,5 @@
 from full_analysis.get_data_abc import *
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 
-# df_group_month = pd.read_csv('/home/dgdata21/PycharmProjects/github/1c_postgresql/csv/sku.csv')
 df_sku_month['period'] = pd.to_datetime(df_sku_month['period'])
 df_sku_month = df_sku_month.drop(columns=['total'])
 df_sku_month['share_percent'] = df_sku_month['share_percent'].astype(float)
@@ -17,7 +13,6 @@ df_sku_month = df_sku_month.drop(columns=['share_percent', 'cumulative'])
 
 df_sku_month['month'] = ''
 
-# df_group_quarter = pd.read_csv('/home/dgdata21/PycharmProjects/github/1c_postgresql/csv/sku_q.csv')
 df_sku_quarter['period'] = pd.to_datetime(df_sku_quarter['period'])
 df_sku_quarter = df_sku_quarter.drop(columns='total')
 df_sku_quarter['share_percent'] = df_sku_quarter['share_percent'].astype(float)
@@ -40,9 +35,4 @@ df_sku_quarter.loc[df_sku_quarter['period'] == '2021-04-01', 'quarter'] = 'q2_20
 df_sku_quarter.loc[df_sku_quarter['period'] == '2021-07-01', 'quarter'] = 'q3_2021'
 df_sku_quarter.loc[df_sku_quarter['period'] == '2021-10-01', 'quarter'] = 'q4_2021'
 
-
 df_sku_quarter_pivot = df_sku_quarter.pivot_table(index='group_abc', columns='quarter', values='sum')
-#
-
-
-

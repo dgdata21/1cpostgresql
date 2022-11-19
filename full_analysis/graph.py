@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import seaborn as sns
 from full_analysis.cohorts import *
 from full_analysis.revenue import *
@@ -19,9 +20,9 @@ def revenue():
             fontsize=9, fontweight='bold',
             bbox={'facecolor': 'green', 'alpha': 0.3})
 
-    # If you need to save the result of plotting you do have to put in following line
-    # if you don't - If you don't need - delete it
-    plt.savefig('~/diag/revenue' + date + '.pdf')
+    # plt.savefig('~/diag/revenue' + date + '.pdf')   # If you need to save the result of plotting
+                                                      # you do have to put in following line
+                                                      # if you don't - If you don't need - delete it
 
     return plt.show()
 
@@ -40,9 +41,9 @@ def revenue_quarter():
             fontsize=9, fontweight='bold',
             bbox={'facecolor': 'green', 'alpha': 0.2})
 
-    # If you need to save the result of plotting you do have to put in following line
-    # if you don't - If you don't need - delete it
-    plt.savefig('~/diag/revenue_q' + date + '.pdf')
+    # plt.savefig('~/diag/revenue_q' + date + '.pdf')   # If you need to save the result of plotting
+                                                        # you do have to put in following line
+                                                        # if you don't - If you don't need - delete it
 
     return plt.show()
 
@@ -59,9 +60,9 @@ def cohort():
     ax.set_title('2021 - 2022', fontsize=12, fontweight='bold')
     ax.set(xlabel='Period of the "life" of cohorts', ylabel='Cohort')
 
-    # If you need to save the result of plotting you do have to put in following line
-    # if you don't - If you don't need - delete it
-    plt.savefig('~/diag/full_analysis' + date + '.pdf')
+    # plt.savefig('~/diag/full_analysis' + date + '.pdf')   # If you need to save the result of plotting
+                                                            # you do have to put in following line
+                                                            # if you don't - If you don't need - delete it
 
     return plt.show()
 
