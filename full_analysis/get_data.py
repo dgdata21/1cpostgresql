@@ -7,10 +7,10 @@ import time
 
 date = time.strftime('%Y-%m-%d %H:%M:%S')
 
-conn = ps2.connect(dbname='1c_postgresql',
-                   host='1xx.2xx.9x.1xx',
-                   user='user',
-                   password='password',
+conn = ps2.connect(dbname='1c_postgresql',                     # your own credentials
+                   host='1xx.2xx.9x.1xx',                      # host you need (where the base is)
+                   user='user',                                # your own credentials
+                   password='password',                        # your own credentials
                    cursor_factory=ps2.extras.DictCursor)
 
 
