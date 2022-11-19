@@ -1,4 +1,4 @@
-# getting revenue by agents 2022
+# getting data for revenue by agents 2022
 query_agent2022 = '''
 with rtu as
          (select encode(1c_postgresql.public._document497._idrref, 'hex')      as doc_id,
@@ -35,7 +35,7 @@ select revenue.date,
 from revenue
 '''
 
-# getting revenue by agents 2021
+# getting data for revenue by agents 2021
 query_agent2021 = '''
 with rtu as
          (select encode(1c_postgresql.public._document497._idrref, 'hex')      as doc_id,
@@ -72,7 +72,7 @@ select revenue.date,
 from revenue
 '''
 
-# getting cohorts
+# getting data for cohorts
 query_all = '''
 with rtu as
          (select encode(1c_postgresql.public._document497._idrref, 'hex')      as doc_id,
