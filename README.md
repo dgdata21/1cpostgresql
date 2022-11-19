@@ -1,3 +1,5 @@
+# Python for application system 1C Enterprise:Trade Management v.11.4
+
 Hi, folks. My name's Dmitriy.\
 Here I'm gonna share my experience in getting and analyzing data from russian application system 1C Enterprise:Trade Management v.11.4
 This research is just example and not full observing the structure of the postgresql base of configuration Trade Management v.11.4, so I'll take only few tables.
