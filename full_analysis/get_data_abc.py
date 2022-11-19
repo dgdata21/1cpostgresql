@@ -4,9 +4,9 @@ import psycopg2 as ps2
 from psycopg2 import extras
 
 conn = ps2.connect(dbname='1c_postgresql',
-                   host='109.236.90.133',
-                   user='postgres',
-                   password='Eghfdktybt<fpfvb',
+                   host='1xx.2xx.9x.1xx',
+                   user='user',
+                   password='user',
                    cursor_factory=ps2.extras.DictCursor)
 
 def query():
