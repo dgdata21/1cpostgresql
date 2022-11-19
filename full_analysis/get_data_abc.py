@@ -1,3 +1,4 @@
+# for all notes about getting data look at the file get_data.py
 from full_analysis.queries_abc import *
 import pandas as pd
 import psycopg2 as ps2
