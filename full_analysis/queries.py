@@ -1,9 +1,9 @@
-# getting codes and names of organizations
-query_org = '''
-select encode(1c_postgresql.public._reference195._idrref, 'hex') as id,
-       _fld21353                                        as name
-from 1c_postgresql.public._reference195
-'''
+# # getting codes and names of organizations
+# query_org = '''
+# select encode(1c_postgresql.public._reference195._idrref, 'hex') as id,
+#        _fld21353                                        as name
+# from 1c_postgresql.public._reference195
+# '''
 
 # getting id and names of partners
 query_clients = '''
