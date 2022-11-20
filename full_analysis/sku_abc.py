@@ -10,8 +10,8 @@ df_sku_month.loc[df_sku_month['cumulative'] <= 20, 'group_abc'] = 'group_a'
 df_sku_month.loc[df_sku_month['cumulative'].between(20.01, 30), 'group_abc'] = 'group_b'
 df_sku_month.loc[df_sku_month['cumulative'] > 30, 'group_abc'] = 'group_c'
 df_sku_month['rn'] = df_sku_month.groupby(['period',
-                                           'group_abc']).cumcount()                             # column for grouping
-                                                                                                # different "slices"
+                                           'group_abc']).cumcount()                              # column for grouping
+                                                                                                 # different "slices"
 df_sku_month = df_sku_month.drop(columns=['share_percent', 'cumulative'])
 
 df_sku_month['month'] = ''
