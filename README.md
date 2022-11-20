@@ -19,3 +19,6 @@ The tables to use:
 - table of managers;
 - table of clients;
 - table of sku.
+
+Example of results:
+src=<https://github.com/dgdata21/1cpostgresql/blob/master/revenue2022-11-19%2022:03:23.pdf>
