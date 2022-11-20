@@ -22,3 +22,4 @@ The tables to use:
 
 Example of results:
 <img title='Fig 1' src='https://github.com/dgdata21/1cpostgresql/blob/master/revenue2022-11-20%2008:18:37.jpg'>
+<img title='Fig 2' src='https://github.com/dgdata21/1cpostgresql/blob/master/cohort_analysis2022-11-20%2008:26:33.jpg'>
