@@ -1,27 +1,33 @@
 from full_analysis.get_data_abc import *
 
-df_sku_month['period'] = pd.to_datetime(df_sku_month['period'])
-df_sku_month = df_sku_month.drop(columns=['total'])
-df_sku_month['share_percent'] = df_sku_month['share_percent'].astype(float)
-df_sku_month['cumulative'] = df_sku_month.groupby('period')['share_percent'].cumsum()
+df_sku_month['period'] = pd.to_datetime(df_sku_month['period'])                                  # transforming data
+df_sku_month = df_sku_month.drop(columns=['total'])                                              # unusful column
+df_sku_month['share_percent'] = df_sku_month['share_percent'].astype(float)                      # transforming data
+df_sku_month['cumulative'] = df_sku_month.groupby('period')['share_percent'].cumsum()            # calculating
+                                                                                                 # of cumulative result
 df_sku_month['group_abc'] = ''
 df_sku_month.loc[df_sku_month['cumulative'] <= 20, 'group_abc'] = 'group_a'
 df_sku_month.loc[df_sku_month['cumulative'].between(20.01, 30), 'group_abc'] = 'group_b'
 df_sku_month.loc[df_sku_month['cumulative'] > 30, 'group_abc'] = 'group_c'
-df_sku_month['rn'] = df_sku_month.groupby(['period', 'group_abc']).cumcount()
+df_sku_month['rn'] = df_sku_month.groupby(['period',
+                                           'group_abc']).cumcount()                             # column for grouping
+                                                                                                # different "slices"
 df_sku_month = df_sku_month.drop(columns=['share_percent', 'cumulative'])
 
 df_sku_month['month'] = ''
 
-df_sku_quarter['period'] = pd.to_datetime(df_sku_quarter['period'])
-df_sku_quarter = df_sku_quarter.drop(columns='total')
-df_sku_quarter['share_percent'] = df_sku_quarter['share_percent'].astype(float)
-df_sku_quarter['cumulative'] = df_sku_quarter.groupby('period')['share_percent'].cumsum()
+df_sku_quarter['period'] = pd.to_datetime(df_sku_quarter['period'])                              # transforming data
+df_sku_quarter = df_sku_quarter.drop(columns='total')                                            # unusful column
+df_sku_quarter['share_percent'] = df_sku_quarter['share_percent'].astype(float)                  # transforming data
+df_sku_quarter['cumulative'] = df_sku_quarter.groupby('period')['share_percent'].cumsum()        # calculating
+                                                                                                 # of cumulative result
 df_sku_quarter['group_abc'] = ''
 df_sku_quarter.loc[df_sku_quarter['cumulative'] <= 20, 'group_abc'] = 'group_a'
 df_sku_quarter.loc[df_sku_quarter['cumulative'].between(20.01, 30), 'group_abc'] = 'group_b'
 df_sku_quarter.loc[df_sku_quarter['cumulative'] > 30, 'group_abc'] = 'group_c'
-df_sku_quarter['rn'] = df_sku_quarter.groupby(['period', 'group_abc']).cumcount()
+df_sku_quarter['rn'] = df_sku_quarter.groupby(['period',
+                                               'group_abc']).cumcount()                          # column for grouping
+                                                                                                 # different "slices"
 df_sku_quarter = df_sku_quarter.drop(columns=['share_percent', 'cumulative'])
 
 df_sku_quarter['quarter'] = ''
