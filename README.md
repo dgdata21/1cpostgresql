@@ -21,5 +21,5 @@ The tables to use:
 - table of sku.
 
 Example of results:
-<img title='Fig 1' src='https://github.com/dgdata21/1cpostgresql/blob/master/revenue2022-11-20%2008:18:37.jpg'>
+<img title='Fig 1' src='https://github.com/dgdata21/1cpostgresql/blob/master/revenue2022-12-12%2011_52_13.pdf'>
 <img title = 'Fig 2' src= 'https://github.com/dgdata21/1cpostgresql/blob/master/Figure_2.jpeg'>
